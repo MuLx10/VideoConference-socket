@@ -29,8 +29,8 @@ serverV = serverV.Server(ip_addr,portV)
 p1 = Process(target=serverV.start, args=(portV,))
 p1.start()
 
-# p2 = Process(target=serverA.start, args=(portA,))
-# p2.start()
+p2 = Process(target=serverA.start, args=(portA,))
+p2.start()
 
 # p1.join()
 # p2.join()
