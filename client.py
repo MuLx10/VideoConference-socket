@@ -31,8 +31,8 @@ clientV = clientV.Client(ip_addr,portV)
 # clientA.connect()
 
 
-# p = Process(target=clientA.connect, args=(portA,))
-# p.start()
+p = Process(target=clientA.connect, args=(portA,))
+p.start()
 
 p = Process(target=clientV.connect, args=(portV,))
 p.start()
