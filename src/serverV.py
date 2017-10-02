@@ -15,8 +15,8 @@ class Server:
     def socket_handler(self,client_socket):
         vsock = videosocket.videosocket(client_socket)
         while True:
-            # frame=vsock.vreceive()
-            # self.videofeed.set_frame(frame)
+            frame=vsock.vreceive()
+            self.videofeed.set_frame(frame)
             frame=self.videofeed.get_frame()
             vsock.vsend(frame)
     	

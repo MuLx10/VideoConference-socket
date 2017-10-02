@@ -15,8 +15,8 @@ class Client:
     def connect(self,port):
         print("Client Video")
         while True:
-            # frame=self.videofeed.get_frame()
-            # self.vsock.vsend(frame)
+            frame=self.videofeed.get_frame()
+            self.vsock.vsend(frame)
             frame = self.vsock.vreceive()
             self.videofeed.set_frame(frame)
 

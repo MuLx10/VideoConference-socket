@@ -4,11 +4,18 @@ import thread
 from multiprocessing import Process
 
 
+import sys
+
 ip_addr = "127.0.0.1"
 
 portA = 6000
-portV = 6001
 
+if len(sys.argv)>2:
+	ip_addr = sys.argv[1]
+	portA = int(sys.argv[2])
+
+
+portV = portA+1
 
 
 
